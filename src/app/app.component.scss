@@ -1,5 +1,6 @@
 .toolbar-icon {
     padding: 0 0.5em;
+    cursor: pointer;
 }
 
 .toolbar-logo {
@@ -18,4 +19,13 @@
 
 .toolbar-search mat-form-field {
     width: 20em;
+}
+
+.toolbar-user {
+    height: 2em;
+    width: 2em;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    cursor: pointer;
 }
