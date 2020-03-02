@@ -1,0 +1,21 @@
+.toolbar-icon {
+    padding: 0 0.5em;
+}
+
+.toolbar-logo {
+    text-align: center;
+}
+
+.toolbar-space {
+    flex: 1 1 auto;
+}
+
+.toolbar-search {
+    min-width: 1em;
+    max-width: 3em;
+    width: 100%;
+}
+
+.toolbar-search mat-form-field {
+    width: 20em;
+}

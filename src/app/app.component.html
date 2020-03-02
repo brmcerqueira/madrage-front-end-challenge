@@ -1,1 +1,20 @@
-<router-outlet></router-outlet>
+<div class="mat-app-background">
+    <mat-toolbar color="primary">
+        <mat-toolbar-row>
+            <form class="toolbar-search">
+                <mat-form-field>
+                    <mat-icon matPrefix>search</mat-icon>
+                    <input type="text" matInput>
+                </mat-form-field>
+            </form>
+            <span class="toolbar-space"></span>
+            <span class="toolbar-logo">TESTE_LOGO</span>
+            <span class="toolbar-space"></span>
+            <mat-icon class="toolbar-icon">home</mat-icon>
+            <mat-icon class="toolbar-icon">people</mat-icon>
+            <mat-icon class="toolbar-icon">notification_important</mat-icon>
+            <mat-icon class="toolbar-icon">help</mat-icon>
+        </mat-toolbar-row>
+    </mat-toolbar>
+    <router-outlet></router-outlet>
+</div>
