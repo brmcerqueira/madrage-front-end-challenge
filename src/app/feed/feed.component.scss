@@ -1,0 +1,16 @@
+.post-avatar {
+    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+    background-size: cover;
+}
+
+.feed {
+    display: block !important;
+}
+
+.feed-mat-card {
+    margin: 1em 0;
+}
+
+.post-mat-card {
+    max-width: 50em;
+}

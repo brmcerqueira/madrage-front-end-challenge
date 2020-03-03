@@ -2,3 +2,15 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-grid-tile .mat-figure {
+    align-items: flex-start !important;
+}
+
+.mat-grid-tile-left .mat-figure {
+    justify-content: flex-start !important;
+}
+
+.mat-grid-tile-right .mat-figure {
+    justify-content: flex-end !important;
+}
