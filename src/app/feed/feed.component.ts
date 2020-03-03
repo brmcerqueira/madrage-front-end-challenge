@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
 
 @Component({
   selector: 'app-feed',
@@ -7,9 +7,28 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeedComponent implements OnInit {
 
-  constructor() { }
+  @ViewChild('directContainer', { read: ViewContainerRef })
+  private directViewContainerRef: ViewContainerRef;
 
-  ngOnInit(): void {
+  @ViewChild('shoppingContainer', { read: ViewContainerRef })
+  private shoppingViewContainerRef: ViewContainerRef;
+
+  constructor(private readonly componentFactoryResolver: ComponentFactoryResolver) { 
+
   }
 
+  ngOnInit(): void {
+    import('../direct/direct.module')
+    .then(() => import('../direct/direct.component'))
+    .then(({ DirectComponent }) => {
+      this.directViewContainerRef.createComponent(
+        this.componentFactoryResolver.resolveComponentFactory(DirectComponent));
+    });
+    import('../shopping/shopping.module')
+    .then(() => import('../shopping/shopping.component'))
+    .then(({ ShoppingComponent }) => {
+      this.shoppingViewContainerRef.createComponent(
+        this.componentFactoryResolver.resolveComponentFactory(ShoppingComponent));
+    });
+  }
 }
