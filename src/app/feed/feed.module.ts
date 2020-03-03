@@ -21,8 +21,4 @@ const routes: Routes = [
         MaterialModule
     ]
 })
-export class FeedModule { 
-    constructor() {
-        import('../shopping/shopping.module').then(m => m.ShoppingModule);    
-    }
-}
+export class FeedModule { }
