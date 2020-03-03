@@ -1,5 +1,17 @@
 {
     "app-component": {
         "logo": "TESTE_LOGO"
+    },
+    "direct-component": {
+        "title": "Seu Nome",
+        "page-init": "Página Inicial",
+        "direct": "Direct",
+        "shopping": "Shopping",
+        "network": "Redes",
+        "facebook": "Facebook",
+        "twitter": "Twitter",
+        "instagram": "Instagram",
+        "google": "Google",
+        "pinterest": "Pinterest"
     }
 }
