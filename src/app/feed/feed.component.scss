@@ -1,3 +1,25 @@
+.feed-mat-card-what-thinking {
+    display: flex;
+}
+
+.feed-mat-card-what-thinking img {
+    height: 4em;
+    width: 4em;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.feed-mat-card-what-thinking form {
+    margin-left: 1em;
+    margin-top: 0.2em;
+    width: 100%;
+}
+
+.feed-mat-card-what-thinking mat-form-field {
+    width: 100%;
+}
+
 .post-avatar {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;

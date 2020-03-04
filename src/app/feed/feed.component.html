@@ -1,5 +1,12 @@
 <div class="feed">
-  <mat-card class="feed-mat-card">Simple card</mat-card>
+  <mat-card class="feed-mat-card feed-mat-card-what-thinking">
+    <img src="./assets/user.jpeg">    
+    <form>
+      <mat-form-field>        
+          <input type="text" matInput [placeholder]="'feed-component.what-thinking' | translate">
+      </mat-form-field>
+    </form>
+  </mat-card>
   <mat-card class="feed-mat-card post-mat-card">
       <mat-card-header>
         <div mat-card-avatar class="post-avatar"></div>

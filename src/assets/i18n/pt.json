@@ -11,5 +11,8 @@
         "instagram": "Instagram",
         "google": "Google",
         "pinterest": "Pinterest"
+    },
+    "feed-component": {
+        "what-thinking": "O que você está sentindo?"
     }
 }
