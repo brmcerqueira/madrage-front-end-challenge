@@ -1,4 +1,5 @@
-import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolver } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { FeedService } from '../feed.service';
 
 @Component({
   selector: 'app-feed',
@@ -6,6 +7,12 @@ import { Component, OnInit, ViewChild, ViewContainerRef, ComponentFactoryResolve
   styleUrls: ['./feed.component.scss']
 })
 export class FeedComponent implements OnInit {
+
+  constructor(feedService: FeedService) {
+
+    
+  }
+
   ngOnInit(): void {
 
   }
