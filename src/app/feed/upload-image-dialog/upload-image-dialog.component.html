@@ -1,12 +1,17 @@
 <h1 mat-dialog-title>Hi</h1>
 <div mat-dialog-content>
-  <p>What's your favorite animal?</p>
-  <mat-form-field>
-    <mat-label>Favorite Animal</mat-label>
-    <input matInput >
-  </mat-form-field>
+  <input type="file" (change)="fileChangeEvent($event)" />
+  <image-cropper [imageChangedEvent]="imageChangedEvent"
+      [maintainAspectRatio]="true"
+      [aspectRatio]="4/3"
+      format="png"
+      (imageCropped)="imageCropped($event)"
+      (imageLoaded)="imageLoaded()"
+      (cropperReady)="cropperReady()"
+      (loadImageFailed)="loadImageFailed()"></image-cropper> 
+  <img [src]="croppedImage"/>
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button (click)="close()">No Thanks</button>
   <button mat-button cdkFocusInitial>Ok</button>
 </div>
