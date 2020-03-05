@@ -5,6 +5,9 @@
       <mat-form-field>        
           <input type="text" matInput [placeholder]="'feed-component.what-thinking' | translate">
       </mat-form-field>
+      <button mat-button (click)="uploadImageDialog()">
+        <mat-icon>photo_camera</mat-icon>
+      </button>
     </form>
   </mat-card>
   <mat-card class="feed-mat-card post-mat-card" *ngFor="let post of data">
