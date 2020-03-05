@@ -13,7 +13,13 @@
         "pinterest": "Pinterest"
     },
     "feed-component": {
-        "what-thinking": "O que você está sentindo?"
+        "what-thinking": "O que você está sentindo?",
+        "ilike": "Curtir",
+        "comment": "Comentar",
+        "share": "Compartilhar",
+        "likes": "{{likes}} Curtidas",
+        "comments": "{{comments}} Comentários",
+        "shared": "{{shared}} Compartilhamentos"
     },
     "time-passed": {
         "today": "Hoje às {{time}}",

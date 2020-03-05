@@ -20,6 +20,18 @@
     width: 100%;
 }
 
+.feed-card-left-details mat-icon {
+    margin-right: 0.3em;
+}
+
+.feed-card-actions {
+    text-align: center;
+}
+
+.feed-card-actions mat-icon {
+    margin: 0 1em;
+}
+
 .post-avatar {
     background-size: cover;
 }
