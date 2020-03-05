@@ -12,7 +12,6 @@ import { UploadImageDialogComponent } from './upload-image-dialog/upload-image-d
 export class FeedComponent{
 
   constructor(private dialog: MatDialog, private feedService: FeedService) {
-
     
   }
 
@@ -25,8 +24,7 @@ export class FeedComponent{
       width: '60em',
       height: '38em',
     }).afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      //this.animal = result;
+      console.log(result);
     });
   }
 }

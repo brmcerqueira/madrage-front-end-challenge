@@ -9,14 +9,15 @@ import { ImageCroppedEvent } from 'ngx-image-cropper';
 })
 export class UploadImageDialogComponent {
 
-  imageChangedEvent: any = '';
-  croppedImage: any = '';
+  public imageChangedEvent: Event;
+  public croppedImage: string;
 
   constructor(private dialogRef: MatDialogRef<UploadImageDialogComponent>) {
-
+    this.imageChangedEvent = null;
+    this.croppedImage = "";
   }
 
-  fileChangeEvent(event: any): void {
+  fileChangeEvent(event: Event): void {
       this.imageChangedEvent = event;
   }
 
@@ -24,23 +25,7 @@ export class UploadImageDialogComponent {
       this.croppedImage = event.base64;
   }
 
-  imageLoaded() {
-      // show cropper
-  }
-
-  cropperReady() {
-      // cropper ready
-  }
-
-  loadImageFailed() {
-      // show message
-  }
-
   close(): void {
-    this.dialogRef.close();
-  }
-
-  ok(): void {
-    this.dialogRef.close();
+      this.dialogRef.close();
   }
 }

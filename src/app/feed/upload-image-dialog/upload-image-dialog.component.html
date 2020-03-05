@@ -9,10 +9,7 @@
       [maintainAspectRatio]="true"
       [aspectRatio]="4/3"
       format="png"
-      (imageCropped)="imageCropped($event)"
-      (imageLoaded)="imageLoaded()"
-      (cropperReady)="cropperReady()"
-      (loadImageFailed)="loadImageFailed()"></image-cropper>
+      (imageCropped)="imageCropped($event)"></image-cropper>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
       <img [src]="croppedImage">
@@ -21,5 +18,5 @@
 </div>
 <div mat-dialog-actions>
   <button mat-button (click)="close()">{{ 'upload-image-dialog-component.close' | translate }}</button>
-  <button mat-button (click)="ok()">{{ 'upload-image-dialog-component.ok' | translate }}</button>
+  <button mat-button [mat-dialog-close]="croppedImage" cdkFocusInitial>{{ 'upload-image-dialog-component.ok' | translate }}</button>
 </div>
