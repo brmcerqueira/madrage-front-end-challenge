@@ -1,0 +1,18 @@
+{
+    "posts": [
+        { 
+            "who": {
+                "avatar": "",
+                "name": "Bruno Cerqueira"
+            },
+            "dateTime": "2020-03-03T11:00:00"
+        },
+        { 
+            "who": {
+                "avatar": "",
+                "name": "Bruno Cerqueira"
+            },
+            "dateTime": "2020-03-04T11:00:00"
+        }
+    ]
+}

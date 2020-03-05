@@ -14,5 +14,10 @@
     },
     "feed-component": {
         "what-thinking": "O que você está sentindo?"
+    },
+    "time-passed": {
+        "today": "Hoje às {{time}}",
+        "yesterday": "Ontem às {{time}}",
+        "amount": "Há {{days}} dias atrás ás {{time}}"
     }
 }

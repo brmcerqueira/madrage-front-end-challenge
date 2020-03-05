@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, DatePipe } from '@angular/common';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 import { FeedComponent } from './feed.component';
 import { MaterialModule } from '../material.module';
 import { TranslateModule } from '@ngx-translate/core';
+import { TimePassedPipe } from './time-passed.pipe';
 
 const routes: Routes = [
     {
@@ -14,7 +15,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [FeedComponent],
+    declarations: [FeedComponent, TimePassedPipe],
     imports: [
         RouterModule.forChild(routes),
         CommonModule,
@@ -22,6 +23,7 @@ const routes: Routes = [
         ReactiveFormsModule,
         TranslateModule,
         MaterialModule
-    ]
+    ],
+    providers: [DatePipe]
 })
 export class FeedModule { }
