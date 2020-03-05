@@ -22,7 +22,8 @@ export class FeedComponent{
 
   uploadImageDialog(): void {
     this.dialog.open(UploadImageDialogComponent, {
-      width: '250px'
+      width: '60em',
+      height: '38em',
     }).afterClosed().subscribe(result => {
       console.log('The dialog was closed');
       //this.animal = result;

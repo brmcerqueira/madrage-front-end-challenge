@@ -39,4 +39,8 @@ export class UploadImageDialogComponent {
   close(): void {
     this.dialogRef.close();
   }
+
+  ok(): void {
+    this.dialogRef.close();
+  }
 }

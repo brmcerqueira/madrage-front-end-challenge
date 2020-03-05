@@ -1,17 +1,25 @@
-<h1 mat-dialog-title>Hi</h1>
-<div mat-dialog-content>
+<h1 mat-dialog-title class="dialog-title">
+  <span>{{ 'upload-image-dialog-component.title' | translate }}</span>
   <input type="file" (change)="fileChangeEvent($event)" />
-  <image-cropper [imageChangedEvent]="imageChangedEvent"
+</h1>
+<div mat-dialog-content>
+  <mat-grid-list cols="2" rowHeight="27em">
+    <mat-grid-tile colspan="1" rowspan="1">   
+      <image-cropper [imageChangedEvent]="imageChangedEvent"
       [maintainAspectRatio]="true"
       [aspectRatio]="4/3"
       format="png"
       (imageCropped)="imageCropped($event)"
       (imageLoaded)="imageLoaded()"
       (cropperReady)="cropperReady()"
-      (loadImageFailed)="loadImageFailed()"></image-cropper> 
-  <img [src]="croppedImage"/>
+      (loadImageFailed)="loadImageFailed()"></image-cropper>
+    </mat-grid-tile>
+    <mat-grid-tile colspan="1" rowspan="1">
+      <img [src]="croppedImage">
+    </mat-grid-tile>
+  </mat-grid-list>    
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="close()">No Thanks</button>
-  <button mat-button cdkFocusInitial>Ok</button>
+  <button mat-button (click)="close()">{{ 'upload-image-dialog-component.close' | translate }}</button>
+  <button mat-button (click)="ok()">{{ 'upload-image-dialog-component.ok' | translate }}</button>
 </div>

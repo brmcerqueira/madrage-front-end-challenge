@@ -25,5 +25,10 @@
         "today": "Hoje às {{time}}",
         "yesterday": "Ontem às {{time}}",
         "amount": "Há {{days}} dias atrás ás {{time}}"
+    },
+    "upload-image-dialog-component": {
+        "title": "Escolha uma imagem para fazer upload.",
+        "close": "Fechar",
+        "ok": "Ok"
     }
 }
