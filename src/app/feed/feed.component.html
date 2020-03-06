@@ -35,7 +35,7 @@
       </mat-grid-list>
       <mat-divider></mat-divider>
       <mat-card-actions class="feed-card-actions">
-        <button mat-button>
+        <button mat-button (click)="iLikeIt(post)">
           <mat-icon>favorite</mat-icon>
           <span>{{ 'feed-component.ilike' | translate }}</span>
         </button>

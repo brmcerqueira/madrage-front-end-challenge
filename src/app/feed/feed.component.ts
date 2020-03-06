@@ -40,7 +40,7 @@ export class FeedComponent{
   }
 
   send(): void {
-    this.feedService.send({
+    this.feedService.create({
       id: null,
       who: {
         avatar: "./assets/user.jpeg",
@@ -54,5 +54,11 @@ export class FeedComponent{
       shared: 0,  
       comments: []
     }).subscribe(() => this.feedService.loadData());
+  }
+
+  iLikeIt(dto: PostDto): void {
+    dto.iLike = !dto.iLike;
+    dto.likes += dto.iLike ? 1 : -1;
+    this.feedService.update(dto).subscribe();
   }
 }

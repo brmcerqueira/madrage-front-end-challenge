@@ -28,7 +28,11 @@ export class FeedService {
     });
   }
 
-  public send(dto: PostDto): Observable<any> {
+  public create(dto: PostDto): Observable<any> {
     return this.http.post(FeedService.uri("posts"), dto);
+  }
+
+  public update(dto: PostDto): Observable<any> {
+    return this.http.put(FeedService.uri(`posts/${dto.id}`), dto);
   }
 }
