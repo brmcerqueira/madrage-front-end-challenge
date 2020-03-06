@@ -35,6 +35,20 @@
             <p translate [translateParams]="{ likes: 23 }">shopping-component.new-likes</p>
         </mat-card-content>
         <mat-divider></mat-divider>
+        <mat-card-content class="mat-card-content-last-sale">
+            <h3>{{ 'shopping-component.last-sale' | translate }}</h3>
+            <div class="last-sale-item">
+                <img src="./assets/smartwatch.png"/>
+                <dl>
+                    <dt>{{ 'shopping-component.last-sale-name' | translate }}</dt>
+                    <dt>{{ 'shopping-component.last-sale-value' | translate }}</dt>
+                    <dd>
+                        <mat-icon>favorite</mat-icon><span>38</span>
+                        <mat-icon>shopping_cart</mat-icon><span>08</span>
+                    </dd>
+                </dl>
+            </div>       
+        </mat-card-content>
     </mat-card>
     <mat-card class="products-card">
         <mat-card-header>

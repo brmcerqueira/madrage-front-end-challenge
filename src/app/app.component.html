@@ -18,7 +18,7 @@
         </mat-toolbar-row>
     </mat-toolbar>
     <div class="div-content">
-        <div class="div-right">
+        <div class="div-left">
             <mat-card class="menu-card">
                 <mat-card-header>
                     <div mat-card-avatar class="menu-avatar" [ngStyle]="{ 'background-image': 'url(' + user.avatar + ')'}"></div>
@@ -65,7 +65,7 @@
         <div class="div-center">
             <router-outlet></router-outlet>
         </div>
-        <div class="div-left">
+        <div class="div-right">
             <ng-container #directContainer></ng-container>
             <ng-container #shoppingContainer></ng-container>
         </div>

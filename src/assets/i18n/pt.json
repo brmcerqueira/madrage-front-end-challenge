@@ -43,6 +43,9 @@
         "likes": "Curtidas",
         "affiliates": "Afiliados",
         "new-likes": "{{likes}} novas curtidas esta semana",
+        "last-sale": "Útima venda",
+        "last-sale-name": "Smartwatch Xiaomi",
+        "last-sale-value": "R$ 699,00",
         "buying-suggestions": "Sugestões de compra",
         "view-more": "Ver mais"
     }

@@ -45,3 +45,30 @@
 .mat-card-content-store mat-icon {
     margin-right: 0.5em;
 }
+
+.mat-card-content-last-sale {
+    padding-top: 1em;
+}
+
+.last-sale-item {
+    display: flex;
+}
+
+.last-sale-item dl {
+    margin-top: 0;
+    margin-left: 0.5em;
+    margin-bottom: 0;
+}
+
+.last-sale-item dd {
+    margin-top: 0.3em;
+    margin-left: 0.5em;
+}
+
+.last-sale-item dd span {
+    margin-right: 1em;
+}
+
+.last-sale-item dd mat-icon {
+    margin-right: 0.1em;
+}
