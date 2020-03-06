@@ -8,6 +8,9 @@
 
 .div-left {
     width: 31%;
+    display: flex;
+    justify-content: flex-end;
+    height: 23em;
 }
 
 .div-right {
@@ -15,8 +18,13 @@
 }
 
 .menu-card {
-    max-width: 50em;
+    max-width: 18em;
     margin: 1em 1em;
+    text-align: right;
+}
+
+.menu-card mat-icon {
+    margin-right: 1em;
 }
 
 .menu-avatar {
