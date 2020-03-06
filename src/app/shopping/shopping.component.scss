@@ -32,11 +32,16 @@
 .mat-card-content-store {
     margin-top: 1em;
     display: flex;
+    margin-bottom: 0.1em;
+}
+
+.mat-card-content-store div {
+    margin-left: 1em;
 }
 
 .mat-card-content-store img {
-    height: 5em;
-    width: 5em;
+    height: 4em;
+    width: 4em;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     border-radius: 50%;
