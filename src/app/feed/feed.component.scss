@@ -22,7 +22,7 @@
 }
 
 .feed-mat-card-what-thinking mat-form-field {
-    width: 26em;
+    width: 76%;
 }
 
 .feed-card-left-details mat-icon {
@@ -41,14 +41,17 @@
     background-size: cover;
 }
 
-.feed {
-    display: block !important;
-}
-
 .feed-mat-card {
     margin: 1em 0;
 }
 
 .post-mat-card {
     max-width: 50em;
+}
+
+.div-post {
+    overflow-y: scroll;
+    height: 57em;
+    padding-left: 0.5em; 
+    padding-right: 0.5em; 
 }

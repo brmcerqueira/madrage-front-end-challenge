@@ -1,18 +1,18 @@
-<div class="feed">
-  <mat-card class="feed-mat-card feed-mat-card-what-thinking">
-    <img src="./assets/user.jpeg">    
-    <form [formGroup]="whatThinkingForm" (ngSubmit)="send()">
-      <mat-form-field>        
-          <input type="text" matInput formControlName="text" [placeholder]="'feed-component.what-thinking' | translate">
-      </mat-form-field>
-      <button mat-button type="submit" [disabled]="!whatThinkingForm.valid">
-        <mat-icon>send</mat-icon>
-      </button>
-      <button mat-button (click)="uploadImageDialog()">
-        <mat-icon>photo_camera</mat-icon>
-      </button>
-    </form>
-  </mat-card>
+<mat-card class="feed-mat-card feed-mat-card-what-thinking">
+  <img src="./assets/user.jpeg">    
+  <form [formGroup]="whatThinkingForm" (ngSubmit)="send()">
+    <mat-form-field>        
+        <input type="text" matInput formControlName="text" [placeholder]="'feed-component.what-thinking' | translate">
+    </mat-form-field>
+    <button mat-button type="submit" [disabled]="!whatThinkingForm.valid">
+      <mat-icon>send</mat-icon>
+    </button>
+    <button mat-button (click)="uploadImageDialog()">
+      <mat-icon>photo_camera</mat-icon>
+    </button>
+  </form>
+</mat-card>
+<div class="div-post">
   <div *ngFor="let post of data">
     <mat-card class="feed-mat-card post-mat-card" *ngVar="{ show: false } as commentMetadata">
       <mat-card-header>
