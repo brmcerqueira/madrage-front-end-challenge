@@ -24,8 +24,4 @@ export class UploadImageDialogComponent {
   imageCropped(event: ImageCroppedEvent) {
       this.croppedImage = event.base64;
   }
-
-  close(): void {
-      this.dialogRef.close();
-  }
 }

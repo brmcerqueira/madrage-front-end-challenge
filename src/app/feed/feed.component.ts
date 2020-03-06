@@ -3,6 +3,7 @@ import { FeedService } from '../feed.service';
 import { PostDto } from '../dto/post.dto';
 import { MatDialog } from '@angular/material/dialog';
 import { UploadImageDialogComponent } from './upload-image-dialog/upload-image-dialog.component';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-feed',
@@ -11,8 +12,20 @@ import { UploadImageDialogComponent } from './upload-image-dialog/upload-image-d
 })
 export class FeedComponent{
 
-  constructor(private dialog: MatDialog, private feedService: FeedService) {
-    
+  public whatThinkingForm: FormGroup;
+  private _image: string;
+
+  constructor(private formBuilder: FormBuilder, 
+    private dialog: MatDialog, 
+    private feedService: FeedService) {
+
+    this.whatThinkingForm = this.formBuilder.group({
+      text: [null, Validators.required]
+    });
+
+    this._image = null;
+
+    this.feedService.loadData();
   }
 
   get data(): PostDto[] {
@@ -23,8 +36,23 @@ export class FeedComponent{
     this.dialog.open(UploadImageDialogComponent, {
       width: '60em',
       height: '38em',
-    }).afterClosed().subscribe(result => {
-      console.log(result);
-    });
+    }).afterClosed().subscribe(result => this._image = result);
+  }
+
+  send(): void {
+    this.feedService.send({
+      id: null,
+      who: {
+        avatar: "./assets/user.jpeg",
+        name: "Bruno Cerqueira"
+      },
+      dateTime: new Date(),
+      text: this.whatThinkingForm.controls.text.value,
+      image: this._image,
+      iLike: false,
+      likes: 0,
+      shared: 0,  
+      comments: []
+    }).subscribe(() => this.feedService.loadData());
   }
 }

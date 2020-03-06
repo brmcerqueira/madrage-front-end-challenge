@@ -1,10 +1,13 @@
 <div class="feed">
   <mat-card class="feed-mat-card feed-mat-card-what-thinking">
     <img src="./assets/user.jpeg">    
-    <form>
+    <form [formGroup]="whatThinkingForm" (ngSubmit)="send()">
       <mat-form-field>        
-          <input type="text" matInput [placeholder]="'feed-component.what-thinking' | translate">
+          <input type="text" matInput formControlName="text" [placeholder]="'feed-component.what-thinking' | translate">
       </mat-form-field>
+      <button mat-button type="submit" [disabled]="!whatThinkingForm.valid">
+        <mat-icon>send</mat-icon>
+      </button>
       <button mat-button (click)="uploadImageDialog()">
         <mat-icon>photo_camera</mat-icon>
       </button>
@@ -20,7 +23,7 @@
       <img mat-card-image *ngIf="post.image" [src]="post.image">
       <mat-grid-list cols="3" rowHeight="2em">
         <mat-grid-tile class="feed-card-left-details">     
-          <mat-icon>thumb_up_alt</mat-icon>
+          <mat-icon>favorite</mat-icon>
           <span translate [translateParams]="{ likes: post.likes }">feed-component.likes</span>
         </mat-grid-tile>
         <mat-grid-tile>
@@ -33,7 +36,7 @@
       <mat-divider></mat-divider>
       <mat-card-actions class="feed-card-actions">
         <button mat-button>
-          <mat-icon>thumb_up_alt</mat-icon>
+          <mat-icon>favorite</mat-icon>
           <span>{{ 'feed-component.ilike' | translate }}</span>
         </button>
         <button mat-button>

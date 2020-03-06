@@ -2,9 +2,9 @@ import { UserDto } from './user.dto';
 import { CommentDto } from './comment.dto';
 
 export type PostDto = {
+    id: number,
     who: UserDto,
     dateTime: Date,
-    related: UserDto[],
     text?: string,
     image?: string,
     iLike: boolean,
@@ -12,4 +12,3 @@ export type PostDto = {
     shared: number,
     comments: CommentDto[]
 };
-

@@ -17,6 +17,6 @@
   </mat-grid-list>    
 </div>
 <div mat-dialog-actions>
-  <button mat-button (click)="close()">{{ 'upload-image-dialog-component.close' | translate }}</button>
+  <button mat-button [mat-dialog-close]="null">{{ 'upload-image-dialog-component.close' | translate }}</button>
   <button mat-button [mat-dialog-close]="croppedImage" cdkFocusInitial>{{ 'upload-image-dialog-component.ok' | translate }}</button>
 </div>
