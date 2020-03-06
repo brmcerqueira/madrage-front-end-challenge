@@ -1,9 +1,14 @@
 .shopping {
+    direction: rtl;
     max-width: 50em;
     margin: 1em 1em;
     overflow-y: scroll;
-    height: 62.5em;
-    padding: 0.5em;
+    height: 63.5em;
+}
+
+.shopping-content {
+    direction: ltr;
+    margin: 0.5em;
 }
 
 .store-card {

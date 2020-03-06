@@ -1,64 +1,66 @@
 <div class="shopping">
-    <mat-card class="store-card">
-        <mat-card-header>
-            <mat-card-title>{{ 'shopping-component.your-store' | translate }}</mat-card-title>
-        </mat-card-header>
-        <mat-divider></mat-divider>
-        <mat-card-content class="mat-card-content-store">
-            <img src="./assets/store-logo.png"/>
-            <div>
-                <h3>{{ 'shopping-component.store-name' | translate }}</h3>
-                <dl>
-                    <dt>
-                        <mat-icon>chat_bubble_outline</mat-icon>
-                        <span matBadge="8" matBadgeOverlap="false">{{ 'shopping-component.messages' | translate }}</span>
-                    </dt>
-                    <dt>
-                        <mat-icon>notifications_none</mat-icon>
-                        <span matBadge="70" matBadgeOverlap="false">{{ 'shopping-component.notifications' | translate }}</span>
-                    </dt>
-                </dl>
-            </div>
-        </mat-card-content>
-        <mat-divider></mat-divider>
-        <mat-card-content class="negotiate-card-content">
-            <button mat-raised-button color="primary">{{ 'shopping-component.negotiate' | translate }}</button>
-        </mat-card-content>
-        <mat-divider></mat-divider>
-        <mat-card-content class="shopping-button-toggle-group">
-            <mat-button-toggle-group>
-                <mat-button-toggle>{{ 'shopping-component.sold' | translate }}</mat-button-toggle>
-                <mat-button-toggle>{{ 'shopping-component.likes' | translate }}</mat-button-toggle>
-                <mat-button-toggle>{{ 'shopping-component.affiliates' | translate }}</mat-button-toggle>
-            </mat-button-toggle-group>
-        </mat-card-content>
-        <mat-card-content>
-            <p>2875</p>
-            <p translate [translateParams]="{ likes: 23 }">shopping-component.new-likes</p>
-        </mat-card-content>
-        <mat-divider></mat-divider>
-        <mat-card-content class="mat-card-content-last-sale">
-            <h3>{{ 'shopping-component.last-sale' | translate }}</h3>
-            <div class="last-sale-item">
-                <img src="./assets/smartwatch.png"/>
-                <dl>
-                    <dt>{{ 'shopping-component.last-sale-name' | translate }}</dt>
-                    <dt>{{ 'shopping-component.last-sale-value' | translate }}</dt>
-                    <dd>
-                        <mat-icon>favorite</mat-icon><span>38</span>
-                        <mat-icon>shopping_cart</mat-icon><span>08</span>
-                    </dd>
-                </dl>
-            </div>       
-        </mat-card-content>
-    </mat-card>
-    <mat-card class="products-card">
-        <mat-card-header>
-            <mat-card-title>{{ 'shopping-component.buying-suggestions' | translate }}</mat-card-title>
-        </mat-card-header>
-        <img mat-card-image src="./assets/products.png">
-        <mat-card-actions>
-            <button mat-button>{{ 'shopping-component.view-more' | translate }}</button>
-        </mat-card-actions>
-    </mat-card>
+    <div class="shopping-content">
+        <mat-card class="store-card">
+            <mat-card-header>
+                <mat-card-title>{{ 'shopping-component.your-store' | translate }}</mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-store">
+                <img src="./assets/store-logo.png"/>
+                <div>
+                    <h3>{{ 'shopping-component.store-name' | translate }}</h3>
+                    <dl>
+                        <dt>
+                            <mat-icon>chat_bubble_outline</mat-icon>
+                            <span matBadge="8" matBadgeOverlap="false">{{ 'shopping-component.messages' | translate }}</span>
+                        </dt>
+                        <dt>
+                            <mat-icon>notifications_none</mat-icon>
+                            <span matBadge="70" matBadgeOverlap="false">{{ 'shopping-component.notifications' | translate }}</span>
+                        </dt>
+                    </dl>
+                </div>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-content class="negotiate-card-content">
+                <button mat-raised-button color="primary">{{ 'shopping-component.negotiate' | translate }}</button>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-content class="shopping-button-toggle-group">
+                <mat-button-toggle-group>
+                    <mat-button-toggle>{{ 'shopping-component.sold' | translate }}</mat-button-toggle>
+                    <mat-button-toggle>{{ 'shopping-component.likes' | translate }}</mat-button-toggle>
+                    <mat-button-toggle>{{ 'shopping-component.affiliates' | translate }}</mat-button-toggle>
+                </mat-button-toggle-group>
+            </mat-card-content>
+            <mat-card-content>
+                <p>2875</p>
+                <p translate [translateParams]="{ likes: 23 }">shopping-component.new-likes</p>
+            </mat-card-content>
+            <mat-divider></mat-divider>
+            <mat-card-content class="mat-card-content-last-sale">
+                <h3>{{ 'shopping-component.last-sale' | translate }}</h3>
+                <div class="last-sale-item">
+                    <img src="./assets/smartwatch.png"/>
+                    <dl>
+                        <dt>{{ 'shopping-component.last-sale-name' | translate }}</dt>
+                        <dt>{{ 'shopping-component.last-sale-value' | translate }}</dt>
+                        <dd>
+                            <mat-icon>favorite</mat-icon><span>38</span>
+                            <mat-icon>shopping_cart</mat-icon><span>08</span>
+                        </dd>
+                    </dl>
+                </div>       
+            </mat-card-content>
+        </mat-card>
+        <mat-card class="products-card">
+            <mat-card-header>
+                <mat-card-title>{{ 'shopping-component.buying-suggestions' | translate }}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="./assets/products.png">
+            <mat-card-actions>
+                <button mat-button>{{ 'shopping-component.view-more' | translate }}</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
 </div>
