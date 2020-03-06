@@ -1,5 +1,7 @@
 import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver, OnInit } from '@angular/core';
 import { FeedService } from './feed.service';
+import { UserService } from './user.service';
+import { UserDto } from './dto/user.dto';
 
 @Component({
   selector: 'app-root',
@@ -15,13 +17,11 @@ export class AppComponent implements OnInit {
   private shoppingViewContainerRef: ViewContainerRef;
 
   constructor(private readonly componentFactoryResolver: ComponentFactoryResolver, 
-    private feedService: FeedService) { 
-
+    private userService: UserService) { 
   }
 
-  public get rows() : number {
-    let length = this.feedService.data.length
-    return length > 1 ? length : 1;
+  public get user(): UserDto {
+    return this.userService.current;
   }
 
   ngOnInit(): void {

@@ -4,6 +4,8 @@ import { PostDto } from '../dto/post.dto';
 import { MatDialog } from '@angular/material/dialog';
 import { UploadImageDialogComponent } from './upload-image-dialog/upload-image-dialog.component';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UserService } from '../user.service';
+import { UserDto } from '../dto/user.dto';
 
 type CommentMetadataDto = { 
   show: boolean
@@ -20,7 +22,8 @@ export class FeedComponent{
   private _image: string;
 
   constructor(private formBuilder: FormBuilder, 
-    private dialog: MatDialog, 
+    private dialog: MatDialog,
+    private userService: UserService, 
     private feedService: FeedService) {
 
     this.whatThinkingForm = this.formBuilder.group({
@@ -30,6 +33,10 @@ export class FeedComponent{
     this._image = null;
 
     this.feedService.loadData();
+  }
+
+  public get user(): UserDto {
+    return this.userService.current;
   }
 
   get data(): PostDto[] {
@@ -46,10 +53,7 @@ export class FeedComponent{
   send(): void {
     this.feedService.create({
       id: null,
-      who: {
-        avatar: "./assets/user.jpeg",
-        name: "Bruno Cerqueira"
-      },
+      who: this.userService.current,
       dateTime: new Date(),
       text: this.whatThinkingForm.controls.text.value,
       image: this._image,

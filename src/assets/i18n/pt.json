@@ -1,7 +1,6 @@
 {
     "app-component": {
         "logo": "TESTE_LOGO",
-        "title": "Seu Nome",
         "page-init": "Página Inicial",
         "direct": "Direct",
         "shopping": "Shopping",

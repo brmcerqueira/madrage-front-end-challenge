@@ -1,5 +1,5 @@
 <mat-card class="feed-mat-card feed-mat-card-what-thinking">
-  <img src="./assets/user.jpeg">    
+  <img [src]="user.avatar"/>    
   <form [formGroup]="whatThinkingForm" (ngSubmit)="send()">
     <mat-form-field>        
         <input type="text" matInput formControlName="text" [placeholder]="'feed-component.what-thinking' | translate">
