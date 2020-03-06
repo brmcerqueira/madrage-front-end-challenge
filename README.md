@@ -10,6 +10,7 @@ Desafio de front end da Mádrage.
 
 - Node Js
 - Npm
+- Angular CLI
 
 # Rodando a aplicação com o Node Js
 
