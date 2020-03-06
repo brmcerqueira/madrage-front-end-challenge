@@ -1,6 +1,9 @@
 .shopping {
     max-width: 50em;
     margin: 1em 1em;
+    overflow-y: scroll;
+    height: 62.5em;
+    padding: 0.5em;
 }
 
 .store-card {
