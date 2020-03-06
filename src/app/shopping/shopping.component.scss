@@ -1,8 +1,47 @@
-.products-card {
-    max-width: 400px;
-}
-
 .shopping {
     max-width: 50em;
     margin: 1em 1em;
+}
+
+.store-card {
+    max-width: 20em;
+}
+
+.products-card {
+    margin-top: 1em;
+    max-width: 20em;
+}
+
+.negotiate-card-content {
+    padding-top: 1em;
+}
+
+.negotiate-card-content button {
+    width: 100%;
+}
+
+.store-card mat-card-content p {
+    text-align: center;
+}
+
+.shopping-button-toggle-group {  
+    padding-top: 1em;
+    padding-left: 1.3em;
+}
+
+.mat-card-content-store {
+    margin-top: 1em;
+    display: flex;
+}
+
+.mat-card-content-store img {
+    height: 5em;
+    width: 5em;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.mat-card-content-store mat-icon {
+    margin-right: 0.5em;
 }

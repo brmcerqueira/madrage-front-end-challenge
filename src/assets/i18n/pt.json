@@ -34,6 +34,15 @@
         "text": "Escreva seu comentário..."
     },
     "shopping-component": {
+        "your-store": "Suas Lojas",
+        "store-name": "Nome da sua loja",
+        "messages": "Mensagens",
+        "notifications": "Notificações",
+        "negotiate": "Negociar",
+        "sold": "Vendidos",
+        "likes": "Curtidas",
+        "affiliates": "Afiliados",
+        "new-likes": "{{likes}} novas curtidas esta semana",
         "buying-suggestions": "Sugestões de compra",
         "view-more": "Ver mais"
     }
