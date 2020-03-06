@@ -1,6 +1,36 @@
 .direct {
     position: absolute;
-    top: 20px;
-    right: 20px;
-    background: blue;
+    top: 5.5em;
+    right: 0;
+    border-top: ridge;
+    border-left: ridge;
+    border-bottom: ridge;
+}
+
+.direct mat-list-item {
+    padding: 0.2em 0;
+}
+
+.direct:before {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 100%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.direct:before {
+    bottom: 50%;
+    border-color: transparent #673ab7 transparent transparent;
+    border-width: 1.5em;
+}
+
+.direct img {
+    height: 3em;
+    width: 3em;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
 }
