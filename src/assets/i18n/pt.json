@@ -33,5 +33,9 @@
     },
     "comment-component": {
         "text": "Escreva seu comentário..."
+    },
+    "shopping-component": {
+        "buying-suggestions": "Sugestões de compra",
+        "view-more": "Ver mais"
     }
 }
