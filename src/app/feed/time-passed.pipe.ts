@@ -17,7 +17,7 @@ export class TimePassedPipe implements PipeTransform {
   }
 
   transform(value: any): string { 
-    let days = moment().diff(value, 'days'); 
+    let days = moment().startOf('day').diff(moment(value).startOf('day'), 'days'); 
 
     let dateDto: DateDto = {
       time: this.datePipe.transform(value, 'shortTime'),
