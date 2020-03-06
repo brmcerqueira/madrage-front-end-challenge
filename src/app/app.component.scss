@@ -1,3 +1,21 @@
+.div-content {
+    display: flex;
+}
+
+.div-center {
+    width: 38%;
+    overflow-y: scroll;
+    height: 67em; 
+}
+
+.div-left {
+    width: 31%;
+}
+
+.div-right {
+    width: 31%;
+}
+
 .menu-card {
     max-width: 50em;
     margin: 1em 1em;

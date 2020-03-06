@@ -17,57 +17,57 @@
             <mat-icon class="toolbar-icon">help</mat-icon>
         </mat-toolbar-row>
     </mat-toolbar>
-    <mat-grid-list cols="3">
-        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-right">
+    <div class="div-content">
+        <div class="div-right">
             <mat-card class="menu-card">
-              <mat-card-header>
-                  <div mat-card-avatar class="menu-avatar"></div>
-                  <mat-card-title>{{ 'app-component.title' | translate }}</mat-card-title>
-              </mat-card-header>
-              <mat-card-content>      
-                  <mat-list>
-                      <mat-divider></mat-divider>
-                      <mat-list-item>
-                          <button mat-icon-button>
-                              <mat-icon>home</mat-icon>
-                              <span>{{ 'app-component.page-init' | translate }}</span>
-                          </button> 
-                      </mat-list-item>
-                      <mat-list-item> 
-                          <button mat-icon-button>
-                              <mat-icon>send</mat-icon>
-                              <span>{{ 'app-component.direct' | translate }}</span>
-                          </button>                  
-                      </mat-list-item>
-                      <mat-list-item>
-                          <button mat-icon-button>
-                              <mat-icon>shopping_cart</mat-icon>
-                              <span>{{ 'app-component.shopping' | translate }}</span>
-                          </button>                
-                      </mat-list-item>
-                      <mat-list-item>
-                          <mat-menu #networkMenu="matMenu">
-                              <button mat-menu-item>{{ 'app-component.facebook' | translate }}</button>
-                              <button mat-menu-item>{{ 'app-component.twitter' | translate }}</button>
-                              <button mat-menu-item>{{ 'app-component.instagram' | translate }}</button>
-                              <button mat-menu-item>{{ 'app-component.google' | translate }}</button>
-                              <button mat-menu-item>{{ 'app-component.pinterest' | translate }}</button>
-                          </mat-menu>                 
-                          <button mat-icon-button [matMenuTriggerFor]="networkMenu">
-                              <mat-icon>language</mat-icon>
-                              <span>{{ 'app-component.network' | translate }}</span>
-                          </button>
-                      </mat-list-item>
-                  </mat-list>
-              </mat-card-content>
-          </mat-card>       
-        </mat-grid-tile>
-        <mat-grid-tile colspan="1" [rowspan]="rows">
+                <mat-card-header>
+                    <div mat-card-avatar class="menu-avatar"></div>
+                    <mat-card-title>{{ 'app-component.title' | translate }}</mat-card-title>
+                </mat-card-header>
+                <mat-card-content>      
+                    <mat-list>
+                        <mat-divider></mat-divider>
+                        <mat-list-item>
+                            <button mat-icon-button>
+                                <mat-icon>home</mat-icon>
+                                <span>{{ 'app-component.page-init' | translate }}</span>
+                            </button> 
+                        </mat-list-item>
+                        <mat-list-item> 
+                            <button mat-icon-button>
+                                <mat-icon>send</mat-icon>
+                                <span>{{ 'app-component.direct' | translate }}</span>
+                            </button>                  
+                        </mat-list-item>
+                        <mat-list-item>
+                            <button mat-icon-button>
+                                <mat-icon>shopping_cart</mat-icon>
+                                <span>{{ 'app-component.shopping' | translate }}</span>
+                            </button>                
+                        </mat-list-item>
+                        <mat-list-item>
+                            <mat-menu #networkMenu="matMenu">
+                                <button mat-menu-item>{{ 'app-component.facebook' | translate }}</button>
+                                <button mat-menu-item>{{ 'app-component.twitter' | translate }}</button>
+                                <button mat-menu-item>{{ 'app-component.instagram' | translate }}</button>
+                                <button mat-menu-item>{{ 'app-component.google' | translate }}</button>
+                                <button mat-menu-item>{{ 'app-component.pinterest' | translate }}</button>
+                            </mat-menu>                 
+                            <button mat-icon-button [matMenuTriggerFor]="networkMenu">
+                                <mat-icon>language</mat-icon>
+                                <span>{{ 'app-component.network' | translate }}</span>
+                            </button>
+                        </mat-list-item>
+                    </mat-list>
+                </mat-card-content>
+            </mat-card>  
+        </div>
+        <div class="div-center">
             <router-outlet></router-outlet>
-        </mat-grid-tile>
-        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-left">
+        </div>
+        <div class="div-left">
             <ng-container #directContainer></ng-container>
             <ng-container #shoppingContainer></ng-container>
-        </mat-grid-tile>
-    </mat-grid-list>    
+        </div>
+    </div>    
 </div>
