@@ -23,7 +23,7 @@ export class FeedService {
 
   public loadData(): void {
     this._data.length = 0;
-    this.http.get<PostDto[]>(FeedService.uri("posts")).subscribe(results => {
+    this.http.get<PostDto[]>(FeedService.uri("posts?_sort=dateTime&_order=desc")).subscribe(results => {
       results.forEach(i => this._data.push(i));
     });
   }

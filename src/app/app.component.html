@@ -18,7 +18,7 @@
         </mat-toolbar-row>
     </mat-toolbar>
     <mat-grid-list cols="3">
-        <mat-grid-tile colspan="1" rowspan="2" class="mat-grid-tile-right">
+        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-right">
             <mat-card class="menu-card">
               <mat-card-header>
                   <div mat-card-avatar class="menu-avatar"></div>
@@ -62,10 +62,10 @@
               </mat-card-content>
           </mat-card>       
         </mat-grid-tile>
-        <mat-grid-tile colspan="1" rowspan="2">
+        <mat-grid-tile colspan="1" [rowspan]="rows">
             <router-outlet></router-outlet>
         </mat-grid-tile>
-        <mat-grid-tile colspan="1" rowspan="2" class="mat-grid-tile-left">
+        <mat-grid-tile colspan="1" rowspan="1" class="mat-grid-tile-left">
             <ng-container #directContainer></ng-container>
             <ng-container #shoppingContainer></ng-container>
         </mat-grid-tile>

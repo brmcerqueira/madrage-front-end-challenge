@@ -1,4 +1,5 @@
 import { Component, ViewChild, ViewContainerRef, ComponentFactoryResolver, OnInit } from '@angular/core';
+import { FeedService } from './feed.service';
 
 @Component({
   selector: 'app-root',
@@ -13,8 +14,14 @@ export class AppComponent implements OnInit {
   @ViewChild('shoppingContainer', { read: ViewContainerRef })
   private shoppingViewContainerRef: ViewContainerRef;
 
-  constructor(private readonly componentFactoryResolver: ComponentFactoryResolver) { 
+  constructor(private readonly componentFactoryResolver: ComponentFactoryResolver, 
+    private feedService: FeedService) { 
 
+  }
+
+  public get rows() : number {
+    let length = this.feedService.data.length
+    return length > 1 ? length : 1;
   }
 
   ngOnInit(): void {
