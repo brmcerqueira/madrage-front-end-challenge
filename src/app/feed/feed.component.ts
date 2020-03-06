@@ -5,6 +5,10 @@ import { MatDialog } from '@angular/material/dialog';
 import { UploadImageDialogComponent } from './upload-image-dialog/upload-image-dialog.component';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 
+type CommentMetadataDto = { 
+  show: boolean
+}
+
 @Component({
   selector: 'app-feed',
   templateUrl: './feed.component.html',
@@ -53,12 +57,24 @@ export class FeedComponent{
       likes: 0,
       shared: 0,  
       comments: []
-    }).subscribe(() => this.feedService.loadData());
+    }).subscribe(() => {
+      this.whatThinkingForm.reset();
+      this.feedService.loadData()
+    });
   }
 
   iLikeIt(dto: PostDto): void {
     dto.iLike = !dto.iLike;
     dto.likes += dto.iLike ? 1 : -1;
     this.feedService.update(dto).subscribe();
+  }
+
+  share(dto: PostDto): void {
+    dto.shared += 1;
+    this.feedService.update(dto).subscribe();
+  }
+
+  showOrHideComments(dto: CommentMetadataDto): void {
+    dto.show = !dto.show;
   }
 }

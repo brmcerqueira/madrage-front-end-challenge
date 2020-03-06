@@ -1,0 +1,50 @@
+.comment-send {
+    display: flex;
+    margin-top: 2em;
+}
+
+.comment-send img {
+    height: 4em;
+    width: 4em;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.comment-send form {
+    margin-left: 1em;
+    margin-top: 0.2em;
+    width: 100%;
+}
+
+.comment-send form button {
+    margin-left: 0.2em;
+    margin-top: 0.2em;
+}
+
+.comment-send mat-form-field {
+    width: 32em;
+}
+
+.comment-message {
+    display: flex;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.comment-message img {
+    height: 3em;
+    width: 3em;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.comment-message dd {
+    margin-top: 0.5em;
+}
+
+.mat-chip-name {
+    margin-left: 0.5em !important;
+    margin-right: 18em !important;
+}

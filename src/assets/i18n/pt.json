@@ -30,5 +30,8 @@
         "title": "Escolha uma imagem para fazer upload.",
         "close": "Fechar",
         "ok": "Ok"
+    },
+    "comment-component": {
+        "text": "Escreva seu comentário..."
     }
 }

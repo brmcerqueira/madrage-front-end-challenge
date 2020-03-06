@@ -13,7 +13,8 @@
       </button>
     </form>
   </mat-card>
-  <mat-card class="feed-mat-card post-mat-card" *ngFor="let post of data">
+  <div *ngFor="let post of data">
+    <mat-card class="feed-mat-card post-mat-card" *ngVar="{ show: false } as commentMetadata">
       <mat-card-header>
         <div mat-card-avatar class="post-avatar" [ngStyle]="{ 'background-image': 'url(' + post.who.avatar + ')'}"></div>
         <mat-card-title>{{ post.who.name }}</mat-card-title>
@@ -39,14 +40,19 @@
           <mat-icon>favorite</mat-icon>
           <span>{{ 'feed-component.ilike' | translate }}</span>
         </button>
-        <button mat-button>
+        <button mat-button (click)="showOrHideComments(commentMetadata)">
           <mat-icon>comment</mat-icon>
           <span>{{ 'feed-component.comment' | translate }}</span>
         </button>
-        <button mat-button>
+        <button mat-button (click)="share(post)">
           <mat-icon>share</mat-icon>
           <span>{{ 'feed-component.share' | translate }}</span>
         </button>
       </mat-card-actions>
-  </mat-card>  
+      <mat-divider *ngIf="commentMetadata.show"></mat-divider>
+      <mat-card-content *ngIf="commentMetadata.show">
+        <app-comment [postDto]="post"></app-comment>
+      </mat-card-content>
+    </mat-card>  
+  </div>
 </div>

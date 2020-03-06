@@ -8,6 +8,8 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TimePassedPipe } from './time-passed.pipe';
 import { UploadImageDialogComponent } from './upload-image-dialog/upload-image-dialog.component';
 import { ImageCropperModule } from 'ngx-image-cropper';
+import { NgVarDirective } from './ng-var.directive';
+import { CommentComponent } from './comment/comment.component';
 
 const routes: Routes = [
     {
@@ -17,7 +19,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-    declarations: [FeedComponent, TimePassedPipe, UploadImageDialogComponent],
+    declarations: [FeedComponent, TimePassedPipe, UploadImageDialogComponent, NgVarDirective, CommentComponent],
     imports: [
         RouterModule.forChild(routes),
         CommonModule,

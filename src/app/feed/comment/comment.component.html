@@ -1,0 +1,25 @@
+<mat-list>
+    <mat-list-item class="comment-message" *ngFor="let comment of postDto.comments">
+        <img [src]="comment.who.avatar"/> 
+        <dl>
+            <dt>
+                <mat-chip-list>
+                    <mat-chip class="mat-chip-name">{{ comment.who.name }}</mat-chip>
+                    <mat-chip color="primary" selected>{{ comment.dateTime | timePassed }}</mat-chip>
+                </mat-chip-list>
+            </dt>
+            <dd>{{ comment.text }}</dd>
+        </dl>
+    </mat-list-item>
+</mat-list>
+<div class="comment-send">
+    <img src="./assets/user.jpeg"/>    
+    <form [formGroup]="commentForm" (ngSubmit)="send()">
+        <mat-form-field>        
+            <input type="text" matInput formControlName="text" [placeholder]="'comment-component.text' | translate">
+        </mat-form-field>
+        <button mat-button type="submit" [disabled]="!commentForm.valid">
+            <mat-icon>send</mat-icon>
+        </button>
+    </form>
+</div> 
