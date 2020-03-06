@@ -4,7 +4,7 @@ Desafio de front end da Mádrage.
 
 # Guia
 - [Requisitos](#requisitos)
-- [Rodando a aplicação com o Docker](#rodando-a-aplicação-com-o-docker)
+- [Rodando a aplicação com o Node Js](#rodando-a-aplicação-com-o-node-js)
 
 # Requisitos
 
