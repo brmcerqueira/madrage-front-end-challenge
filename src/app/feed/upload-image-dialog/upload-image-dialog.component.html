@@ -5,11 +5,7 @@
 <div mat-dialog-content>
   <mat-grid-list cols="2" rowHeight="27em">
     <mat-grid-tile colspan="1" rowspan="1">   
-      <image-cropper [imageChangedEvent]="imageChangedEvent"
-      [maintainAspectRatio]="true"
-      [aspectRatio]="4/3"
-      format="png"
-      (imageCropped)="imageCropped($event)"></image-cropper>
+      <image-cropper [imageChangedEvent]="imageChangedEvent" format="png" (imageCropped)="imageCropped($event)"></image-cropper>
     </mat-grid-tile>
     <mat-grid-tile colspan="1" rowspan="1">
       <img [src]="croppedImage">
